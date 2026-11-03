@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
+  --series-5: #e87ba4; --series-6: #008300; --series-7: #6250d6; --series-8: #e34948;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+}
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-ink-50 text-ink-900 font-sans antialiased; font-feature-settings: "ss01", "cv11"; }
+::selection { background: #B2EDE7; }
+.tabular { font-variant-numeric: tabular-nums; }
+.scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #D9E0E6; border-radius: 8px; }
+.focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2; }
+.grid-bg { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 44px 44px; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.animate-rise { animation: rise .35s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .animate-rise { animation: none; } }
+.recharts-cartesian-axis-tick-value { font-size: 11px; fill: #5B7186; }
+.recharts-tooltip-wrapper { outline: none; }
